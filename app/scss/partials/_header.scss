@@ -1,0 +1,125 @@
+
+header {
+	overflow: hidden;
+
+	@include breakpoint('tablet') {
+		margin: 0 auto;
+	}
+	.superscript{
+		display: none;
+		width: 28.6vw;
+		@include breakpoint('tablet'){
+			position: absolute;
+			top: 145px;
+			right: 0;
+			//width: 400px;
+			display: block;
+		}
+	}
+}
+
+.cmrHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		color: $green;
+	}
+
+
+	.link-wrap {
+		a {
+			color: $green;
+			text-decoration: underline;
+		}
+	}
+	@include breakpoint('tablet') {
+		padding: 20px;
+		max-width: unset;
+		margin: 0 auto;
+
+		.globalHeader_logo {
+			margin: 0 20px 0 auto;
+		}
+
+		.link-wrap {
+			margin-left: auto;
+
+			a {
+				color: $green;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media screen and (max-width: $tablet) {
+		flex-direction: column;
+
+		.globalHeader_logo {
+			margin-top: 20px;
+		}
+
+		h2 {
+			margin: 15px 0;
+			font-size: 24px;
+		}
+
+		.link-wrap {
+			margin-bottom: 20px;
+		}
+
+	}
+}
+
+.globalHeader_logo {
+	float: left;
+
+	.logo {
+		width: 80px;
+	}
+
+	@include breakpoint('tablet') {
+		float: none;
+		.logo {
+			width: 130px;
+		}
+	}
+}
+
+.globalHeader_options {
+	margin-top: 30px;
+	float: right;
+	a {
+		font-size: 14px;
+		color: $grey-dark;
+		padding-bottom: 2px;
+		border-bottom: 1px solid $grey-dark;
+		&:hover{
+			text-decoration: none;
+			color: $red;
+			border-bottom: 1px solid $red;
+		}
+	}
+	@include breakpoint('tablet') {
+		float: none;
+		text-align: center;
+		a{
+			position: relative;
+			top:-50px;
+		}
+	}
+}
+
+/* Notice Header - Covid Banner */
+.noticeHeader {
+	display:none;
+	padding: 20px 20px 20px;
+	max-width: 100%;
+	background: $red;
+	position: relative;
+	z-index: 1;
+	p {
+		color: #fff;
+	}
+}

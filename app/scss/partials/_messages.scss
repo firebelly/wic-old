@@ -1,0 +1,12 @@
+// For banner to show state wic link
+.stateMessage {
+    padding: 20px;
+    background: $red;
+    p {
+        color: #fff;
+        a {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+}

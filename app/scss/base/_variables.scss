@@ -1,0 +1,41 @@
+$grey: #f7f7f7;
+$grey-dark: #939699;
+$red: #ec6b6d;
+$green: #98c43a;
+$green-dark: #2cb34a;
+$purple: #6c549a;
+$purple-dark: #2e3189;
+$purple-new: #2e3192;
+$purple-light: #c4bbd7;
+$black: #626161;
+$border: #DDDEDF;
+// Base Font
+$base-font-size: 18; 
+$base-line-height: 27;
+
+// Breakpoints
+$breakpoints: (
+	"mobile-large": 400px,
+	"tablet": 850px,
+	"desktop": 1000px,
+	'desktop-med': 1100px,
+	'footer-update': 1100px,
+	"desktop-large": 1400px,
+);
+
+$mobile-large: 400px;
+$tablet: 850px;
+$desktop: 1000px;
+$desktop-med: 1100px;
+$footer-update: 1100px;
+$desktop-large: 1400px;
+
+$breakpoint-directions: (
+  "min": "min-width",
+  "max": "max-width"
+);
+
+$breakpoint-menu: tablet-landscape; 
+
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
