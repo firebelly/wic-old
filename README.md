@@ -1,5 +1,7 @@
 # WIC Frontend
 
+The READ.me below was written by the 3rd party team that managed WIC's old site. 
+
 ## Who?
 
 The Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)
