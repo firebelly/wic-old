@@ -9,6 +9,9 @@ Deploy via AWS Elastic Beanstalk (NOTE: US West 2 Region!):
 Current site lives on this environment:
 ["WIC Office Swap Wordpress"](https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard?environmentId=e-bhfuirfcjm)
 
+Delete deployed application versions:
+[Beanstalk cleanup](https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/application/versions?applicationName=Wic%20Offices%20Wordpress)
+
 
 The READ.me below was written by the 3rd party team that managed WIC's old site. 
 
