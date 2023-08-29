@@ -1,0 +1,29 @@
+<script id="info-section" type="tmpl">
+	<section class="infoSection">
+		<div class="infoSection_content">
+			<h2>{{title}}</h2>
+			<p>
+				{{text}}
+			</p>
+		</div>
+		
+		<div class="infoSection_list">
+			<ul class="infoSection_menu">
+
+				<li class="infoSection_item" v-for="item in items">
+					<img class="info_icon" :src="item.img">
+					<h4>{{item.title}}</h4>
+
+					<ul class="inner_list">
+						<li v-for="subitem in item.list">
+							{{subitem}}
+						</li>
+					</ul>
+
+				</li>
+
+			</ul>
+		</div>
+		
+	</section>
+</script>

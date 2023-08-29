@@ -1,0 +1,329 @@
+
+.form {
+	background: $purple-new;
+	padding: 40px 20px;
+	position: relative;
+	overflow: auto;
+
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 20px;
+		color: white;
+	}
+
+	@include breakpoint('tablet') {
+		padding:  60px 30px 100px;
+	}
+}
+
+.formSection_form {
+	input, button{
+		display: inline-block;
+	}
+
+	form{
+		font-size: 0;
+		position: relative;
+		vertical-align: middle;
+	}
+
+
+	@include breakpoint('tablet') {
+		overflow: auto;
+		max-width: 760px;
+		margin: 0 auto;
+	}
+}
+
+.map {
+	@include clearfix;
+}
+
+.formSection_input {
+	border-radius: 5px;
+	margin-top: 40px;
+	background: white;
+	-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+	font-family: 'din-regular', verdana, sans-serif;
+	font-weight: 600;
+	text-align: center;
+	padding: 14px 0;
+	margin-right: 10px;
+	width: 100%;
+	background: block;
+	color: #7a7a7a;
+	border: none;
+	font-size: 25px;
+	display: inline-block;
+	outline: none;
+
+	@include breakpoint('desktop') {
+		float: left;
+		width: 471px;
+		font-size: 24px;
+		text-align: left;
+		padding: 18px 0;
+		padding-left: 20px;
+
+	}
+
+	&::-webkit-input-placeholder {
+		color: #7a7a7a;
+		font-family: 'din-regular', verdana, sans-serif;
+	 }
+	 
+	&:-moz-placeholder { /* Firefox 18- */
+		color: #7a7a7a;
+		font-family: 'din-regular', verdana, sans-serif;
+	 }
+	 
+	&::-moz-placeholder {  /* Firefox 19+ */
+		color: #7a7a7a;
+		font-family: 'din-regular', verdana, sans-serif;
+	 }
+}
+
+
+
+:-ms-input-placeholder {
+   color: $purple;
+}
+
+input {
+	-webkit-appearance: none;
+}
+
+.formSection_submit {
+	border-radius: 5px;
+	font-family: 'Gravur', verdana, sans-serif;
+	padding: 20px 0;
+	text-align: center;
+	margin: 20px 0;
+	color: white;
+	display: block;
+	background: $green-dark;
+	width: 100%;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 24px;
+	transition: background .2s;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	box-shadow: none;
+	/*
+	background: url('/static/img/wic_search.svg') no-repeat;
+	background-size: 50%;
+	background-position: 50%;
+	background-color: $purple-light;
+	*/
+
+	@include breakpoint('desktop') {
+		text-indent: 0px;
+		position: relative;
+		height: auto;
+		top: 0;
+		padding: 21px 0;
+		margin-top: 40px;
+		float: left;
+		font-size: 24px;
+		width: 249px;
+		margin-bottom: 0;
+
+		&:hover, &:active, &:focus {
+			background: lighten($green-dark, 10%);
+		}
+
+	}
+}
+
+.tabSelector {
+	font-size: 0;
+
+	@include breakpoint('desktop') {
+		display: none;
+	}
+
+	li {
+		cursor: pointer;
+		background: $grey;
+		padding: 40px 0;
+		text-align: center;
+		font-size: 18px;
+		display: inline-block;
+		width: 50%;
+		box-shadow: inset 0px -10px 0px 0px darken($grey, 15%);
+
+		&.active {
+			background: white;
+			color: $green;
+			box-shadow: none;
+		}
+
+		&:hover {
+			color: $red;
+
+			&.active {
+				color: $green;
+			}
+		}
+	}
+}
+
+.app_content{
+	@include clearfix;
+	margin: 0 auto;
+}
+
+.listViewSection {
+	display: none;
+	height: 650px;
+	overflow: scroll;
+	box-shadow: 8px 0px 0px 0px rgba(0, 0, 0, .1);
+	z-index: 5;
+	position: relative;
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		color: $grey-dark;
+		padding: 30px 20px;
+		font-size: 24px;
+		border-bottom: 1px solid $border;
+	}
+
+	.itemInfo_content {
+		padding: 0 20px;
+		cursor: pointer;
+	}
+
+	.listItem {
+		overflow: auto;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		clear: both;
+		border-bottom: 1px solid $border;
+	}
+
+	.listItem_number {
+		background: $purple;
+		color: white;
+		height: 50px;
+		text-align: center;
+		width: 50px;
+		border-radius: 200px;
+		float: left;
+
+		p {
+			color: white;
+			margin-top: 12px;
+
+			@include breakpoint('desktop') {
+				margin-top: 9px;
+			}
+		}
+	}
+
+	.itemInfo {
+		float: left;
+		width: 85%;
+	}
+
+	.itemInfo_title {
+		font-size: 18px;
+		padding-bottom: 4px;
+		line-height: 22px;
+	}
+
+	.listItem_address, .listItem_phone, .listItem_phone, .listItem_directions {
+		font-size: 14px;
+		line-height: 18px;
+		padding-bottom: 4px;
+	}
+
+	.listItem_phone{
+		a{
+			color: $black;
+		}
+	}
+
+	.listItem_directions {
+		font-family: 'din-bold', verdana, sans-serif;
+		display: inline-block;
+		color: $red;
+		padding-top: 12px;
+		padding-bottom: 2px;
+		border-bottom: 1px solid white;
+		&:hover {
+			border-bottom: 1px solid $red;
+		}
+	}
+
+	.listItem_content {
+		padding: 20px;
+		overflow: auto;
+	}
+
+	@include breakpoint('desktop') {
+		float: left;
+		border-bottom: 1px solid $border;
+		width: 470px;
+		display: block !important;
+		h3 {
+			padding: 40px 0px;
+		}
+	}
+
+}
+
+.mapViewSection {
+	display: none;
+	@include breakpoint('desktop'){
+		height: 620px;
+		display: block;
+		width: calc(100% - 470px);
+		float: left;
+		display: block !important;
+	}
+
+}
+
+.active.mapViewSection {
+	display: block;
+}
+
+.active.listViewSection {
+	display: block;
+}
+
+.seeMoreButton {
+	background: $purple-dark;
+	text-align: center;
+	padding: 30px 0;
+	cursor: pointer;
+	transition: background .2s;
+
+	p {
+		font-family: 'Gravur', verdana, sans-serif;
+		text-transform: uppercase;
+		color: white;
+		font-size: 24px;
+	}
+
+	&:hover {
+		background: lighten($purple-dark, 10%);
+	}
+}
+
+.vue-hidden {
+	display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

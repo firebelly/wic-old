@@ -1,0 +1,67 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "16.9.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.19.1",
+    "autoprefixer": "^7.1.6",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "callfire-api-client-js": "0.0.4",
+    "cookie-parser": "^1.4.4",
+    "ejs": "2.4.1",
+    "express": "^4.16.4",
+    "express-session": "^1.14.2",
+    "express-subdomain": "^1.0.5",
+    "geolib": " 2.0.21",
+    "googleanalytics": "^0.3.8",
+    "htmlencode": "0.0.4",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "minified": "^1.0.1",
+    "mixpanel": "^0.5.0",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "universal-analytics": "^0.4.20",
+    "uuid": "^2.0.3",
+    "vue": "^1.0.26",
+    "vue-resource": "^1.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^0.28.7",
+    "es6-promise": "^4.2.6",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
+    "webpack": "5.x.x",
+    "webpack-cli": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "license": "MIT"
+}

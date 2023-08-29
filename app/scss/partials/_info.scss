@@ -1,0 +1,282 @@
+
+.infoSection {
+	padding: 40px 0;
+
+	h2 {
+		text-align: center;
+		color: $purple;
+		text-transform: uppercase;
+		padding: 0 20px;
+
+		&:after {
+			content: '';
+			height: 7px;
+			width: 100px;
+			margin: 30px auto;
+			display: block;
+			background: $purple;
+			border-radius: 100px;
+			@include breakpoint('tablet') {
+				margin: 40px auto;
+			}
+		}
+	}
+
+	p {
+		text-align: center;
+	}
+
+	@include breakpoint('tablet') {
+		max-width: 1200px;
+		margin: 80px auto 40px;
+
+		h2 {
+			margin: 0 auto;
+			max-width: 560px;
+		}
+
+		p {
+			margin: 0 auto;
+			max-width: 450px;
+		}
+	}
+	
+}
+
+.infoSection_content {
+	padding: 0px 20px;
+	padding-bottom: 60px;
+	@include breakpoint('tablet') {
+		padding-bottom: 20px;
+	}
+}
+
+.infoSection_list {
+
+	@include breakpoint('tablet') {
+		@include container;
+	}
+
+}
+
+.infoSection_item {
+	border-bottom: 1px solid $border;
+	font-size: 21px;
+	color: $grey-dark;
+	padding: 30px 20px;
+	text-transform: uppercase;
+	position: relative;
+	cursor: pointer;
+
+	h4{
+		font-family: 'Gravur', verdana, sans-serif;
+	}
+	ul {
+		max-height: 0;
+		transition: max-height 0.15s ease-out;
+		overflow: hidden;
+		li:first-of-type{
+			padding-top: 20px;
+		}
+	}
+
+	li {
+		font-family: 'din-regular', verdana, sans-serif;
+		text-transform: none;
+		padding: 4px 20px;
+		font-size: 18px;
+		color: $black;
+	}
+
+	&:first-of-type {
+		border-top: 1px solid $border;
+	}
+
+	&:after {
+		content: '+';
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		font-size: 35px;
+
+	}
+
+	.info_icon{
+		display: none;
+	}
+
+	&.expanded{
+		ul{
+			max-height: 500px;
+			transition: max-height 0.3s ease-in;
+		}
+		&:after {
+			content: '-';
+		}
+	}
+
+	@include breakpoint('tablet') {
+		@include span(3 of 12);
+
+		border: none;
+		cursor: default;
+
+		.info_icon {
+			width: 70px;
+			margin: 10px auto;
+			display: block;
+		}
+
+		ul{
+			max-height: 500px;
+			overflow: auto;
+		}
+
+		h4{
+			font-size: 26px;
+			text-align: center;
+			&:after{
+				border-radius: 100px;
+				content: '';
+				display: block;
+				width: 60px;
+				height: 2px;
+				background: $grey-dark;
+				margin: 20px auto;
+
+			}
+		}
+
+		li{
+			color: $black;
+			text-align: center;
+			font-size: 15px;
+			&:first-of-type {
+				padding-top: 0 !important;
+			}
+		}
+
+		&:first-of-type {
+			border: none;
+		}
+
+		&:nth-child(4n){
+			@include omega();
+		}
+
+		&:after{
+			content: '';
+		}
+		&.expanded{
+			max-height: auto;
+			&:after{
+				content: '';
+			}
+		}
+	}
+
+
+}
+
+.support{
+	background: $grey;
+}
+
+.support_content {
+	padding: 60px 20px;
+	@include breakpoint('tablet') {
+		padding: 120px 20px;
+	}
+	h2 {
+		text-align: center;
+		color: $red;;
+		text-transform: uppercase;
+
+		&:after {
+			content: '';
+			height: 7px;
+			width: 100px;
+			margin: 30px auto;
+			display: block;
+			background: $red;
+			border-radius: 100px;
+
+			@include breakpoint('tablet') {
+				margin: 40px auto;
+			}
+		}
+	}
+
+	h3{
+		text-align: center;
+		color: $grey-dark;
+		padding: 40px 0;
+	}
+
+	li{
+		padding: 4px 0;
+		padding-left: 25px;
+		font-size: 16px;
+		position: relative;
+
+		&:before{
+			content: '';
+			top: 5px;
+			position: absolute;
+			left: 0;
+			height: 15px;
+			width: 15px;
+			display: inline-block;
+			background: url(/static/img/check.svg) no-repeat;
+		}
+		@include breakpoint('tablet') {
+			padding-top: 8px;
+			&:before{
+				width: 13px;
+				height: 13px;
+				top: 14px;
+			}
+		}
+		
+	}
+	p{
+		text-align: center;
+		@include breakpoint('tablet') {
+			&:first-of-type{
+				max-width: 450px;	
+			}
+			max-width: 650px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.support_list{
+	&:after {
+		content: '';
+		height: 3px;
+		width: 100px;
+		margin: 40px auto;
+		display: block;
+		background: $grey-dark;
+		border-radius: 20px;
+		margin: 40px auto;
+	}
+
+	@include breakpoint('mobile-large') {
+		overflow: auto;
+		clear: both;
+		width: 100%;
+		max-width: 350px;
+		margin: 0px auto 30px;
+		li{
+			width: 50%;
+			float: left;
+		}
+
+		&:after{
+			content: '';
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/header.ejs %>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SWP3N3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src='//20755914p.rfihub.com/ca.html?rb=28807&amp;ca=20755914&amp;_o=28807&amp;_t=20755914&amp;ra=%n' style='display:none;padding:0;margin:0' width='0' height='0'>
+		</iframe>
+	</noscript>
+
+	<div id="app"  class="home" style="display: none;">
+
+		<header-section v-bind:language="language"></header-section>
+
+		<landing-section v-bind:language="language"></landing-section>
+
+		<section class="map">
+			<div class="form">
+				<h3>{{formText.title}}</h3>
+				<div class="formSection_form">
+					<form>
+						<input id="map-field" class="formSection_input" type="text" v-model="zipcode" :placeholder="formText.placeholder">
+						<button type="submit" class="formSection_submit"
+							v-on:click="getData($event), setTrackingPixels($event)">{{formText.cta}}</button>
+					</form>
+				</div>
+				<div class="loading-sprite" v-show="loading"><img src="/static/img/loading.svg"></div>
+				<error v-bind:error="error"></error>
+			</div>
+			<div class="app_content" v-show="loaded">
+				<div id="message-section" class="stateMessage"></div>
+				<ul class="tabSelector">
+					<li class="listView active">List View</li>
+					<li class="mapView">Map</li>
+				</ul>
+
+				<div class="listViewSection active">
+
+				<h3>{{listHeader}} {{ user.zip }}:</h3>
+				<list v-bind:offices="offices" v-bind:language="language">
+				</list>
+
+					<div class="seeMoreButton" v-show="!showMore" @click="revealContent">
+						<p>{{seeMoreButton}}</p>
+					</div>
+
+				</div>
+
+				<div class="mapViewSection">
+					<map v-bind:language="language"></map>
+				</div>
+
+			</div>
+		</section>
+		<span id="scroll-sec"></span>
+
+		<info-section v-bind:language="language"></info-section>
+		<!--<support-section v-bind:language="language"></support-section>-->
+		<footer-section v-bind:language="language"></footer-section>
+		<sticky-footer v-bind:language="language"></sticky-footer>
+
+	</div>
+
+	<% include ../templates/map.ejs %>
+	<% include ../templates/list.ejs %>
+	<% include ../templates/error-toast.ejs %>
+	<% include ../templates/info-section.ejs %>
+	<% include ../templates/header-section.ejs %>
+	<% include ../templates/message-section.ejs %>	
+	<% include ../templates/landing-section.ejs %>
+	<% include ../templates/support-section.ejs %>
+	<% include ../templates/footer-section.ejs %>
+	<% include ../templates/sticky-footer.ejs %>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoL7kKE1cLNReUJBUIivowlg_TVa22iG0"></script>
+	<script type="text/javascript" src="/static/js/bundle.js"></script>
+
+</body>
+
+</html>

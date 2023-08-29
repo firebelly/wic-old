@@ -1,0 +1,32 @@
+<script id="single" type="tmpl">
+	<div class="listItem_content" v-on:click="setActive" v-bind:class="{ 'is-active': office.active }">
+		<div class="listItem_number">
+			<p>{{index + 1}}</p>
+		</div>
+		<div class="itemInfo">
+			<div class="itemInfo_content">
+				<p v-if="office.location_name" class="itemInfo_title">{{office.location_name}}</p>
+				<p class="listItem_address">
+					{{office.address_1}}
+					<span v-if="office.address_2"> <br> {{office.address_2}}</span>
+					<br> {{office.city}} {{office.state}} {{office.postal_code}}
+				</p>
+				<p class="listItem_phone"><a href="tel:{{office.telephone}}">{{ office.formattedNumber }}</a></p>
+				<a class="listItem_directions" href="{{ 'http://maps.google.com/?q=' + office.address_1 + ' ' + office.city}} " target="_blank">{{directionButton}}</a>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="list" type="tmpl">
+	<div>
+		<ul>
+			<li class="listItem" v-for="(index, office) in offices" v-bind:class="{ 'vue-hidden' :  index > 9}">
+				<single v-bind:index="index"
+						v-bind:office="office",
+						v-bind:language="language",
+				</single>
+			</li>
+		</ul>
+	</div>
+</script>

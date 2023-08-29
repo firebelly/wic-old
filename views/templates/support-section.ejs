@@ -1,0 +1,13 @@
+<script id="support-section" type="tmpl">
+	<section class="support">
+		<div class="support_content">
+			<h2>{{title}}</h2>
+			<p>{{text}}</p>
+			<h3>{{subtitle}}:</h3>
+			<ul class="support_list">
+				<li v-for="item in items">{{item}}</li>
+			</ul>
+			<p v-html="text2"></p>
+		</div>
+	</section>
+</script>

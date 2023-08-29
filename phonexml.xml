@@ -1,0 +1,242 @@
+<dialplan name="Root">
+	<stash varname="wic">Wick</stash>
+	<wait >1																								
+	</wait>
+	<play type="tts">Thank you for contacting ${wic}</play>
+	<menu maxDigits="1" timeout="5000" name="langMenu">
+		<play type="tts">For Spanish Press 1. For English Press 2</play>
+		<keypress pressed="1">
+			<wait >1   																																																			
+			</wait>
+			<menu maxDigits="5" timeout="5000" name="mainMenuSpan">
+				<play type="tts" voice="spanish1">Por favor, marca los cinco digitos de tu codigo postal.</play>
+				<keypress pressed="default">
+					<stash varname="zipcode">'${call.lastinput}'</stash>
+					<stash varname="ziplength">'${call.lastinput}'.length</stash>
+				</keypress>
+			</menu>
+			<if expr="${ziplength} &lt; 5">
+				<stash varname="stash1">'${call.lastinput}'</stash>
+				<play type="tts" voice="spanish1">No pudimos confirmar tu codigo postal. Por favor, vuelve a marcar tu codigo postal.</play>
+				<goto>mainMenuSpan</goto>
+			</if>
+			<get varname="zip_string" timeout="4000" name="get_from_db_span">http://wic-offices-frontend.us-west-2.elasticbeanstalk.com/phoneObj?zipcode=${zipcode}&amp;lang=spanish&amp;number=${call.dnis}</get>
+			<stash varname="address">'${zip_string}'.split(" | ")[0];</stash>
+			<stash varname="phone">'${zip_string}'.split(" | ")[1];</stash>
+			<stash varname="readable_phone">'${phone}'.split('').join(", ");</stash>
+			<wait >1    																																																			
+			</wait>
+			<if expr="'${address}' == 'Error'">
+				<wait >1				    																																																																											
+				</wait>
+				<play type="tts" voice="spanish1">No pudimos confirmar tu codigo postal. Por favor, vuelve a marcar tu codigo postal.</play>
+				<wait >1				    																																																																											
+				</wait>
+				<goto>mainMenuSpan</goto>
+			</if>
+			<play type="tts" voice="spanish1">Hemos encontrado una oficina en la siguiente direccion, ${address}.</play>
+			<menu maxDigits="1" timeout="5000" name="optionMenuSpan">
+				<play type="tts" voice="spanish1">Marca 1 para conectarte con la oficina, marca 2 si quieres que te demos el numero, marca 3 si has terminado.</play>
+				<keypress pressed="1">
+					<play type="tts" voice="spanish1">Te estamos conectando con esa oficina.</play>
+					<transfer name="WIC_Office_Span">${phone}</transfer>
+				</keypress>
+				<keypress pressed="2">
+					<play type="tts" voice="spanish1">El numero de telefono es${readable_phone}</play>
+					<wait >3   																																																																																					
+					</wait>
+					<play type="tts" voice="spanish1">Nuevamente, el numero de telefono es${readable_phone}</play>
+					<wait >3   																																																																																					
+					</wait>
+					<goto>optionMenuSpan</goto>
+				</keypress>
+				<keypress pressed="3">
+					<play type="tts" voice="spanish1">Gracias por llamar a ${wic}. Que tengas un buen dia.</play>
+					<wait >1    																																																																																					
+					</wait>
+					<hangup/>
+				</keypress>
+			</menu>
+		</keypress>
+		<keypress pressed="2">
+			<wait >1																																																												
+			</wait>
+			<menu maxDigits="5" timeout="5000" name="mainMenu">
+				<play type="tts">please enter your 5 digit zip code now</play>
+				<keypress pressed="default">
+					<stash varname="zipcode">'${call.lastinput}'</stash>
+					<stash varname="ziplength">'${call.lastinput}'.length</stash>
+				</keypress>
+			</menu>
+			<if expr="${ziplength} &lt; 5">
+				<stash varname="stash1">'${call.lastinput}'</stash>
+				<play type="tts">I'm sorry the zipcode you have entered is incorrect, please try again.</play>
+				<goto>mainMenu</goto>
+			</if>
+			<get varname="zip_string" timeout="4000" name="get_from_db">http://wic-offices-frontend.us-west-2.elasticbeanstalk.com/phoneObj?zipcode=${zipcode}&amp;lang=english&amp;number=${call.dnis}</get>
+			<stash varname="address">'${zip_string}'.split(" | ")[0];</stash>
+			<stash varname="phone">'${zip_string}'.split(" | ")[1];</stash>
+			<stash varname="readable_phone">'${phone}'.split('').join(", ");</stash>
+			<wait >1																																																																
+			</wait>
+			<if expr="'${address}' == 'Error'">
+				<wait >1				    																																																																																
+				</wait>
+				<play type="tts">I'm sorry the zipcode you have entered is incorrect, please try again.</play>
+				<wait >1				    																																																																																
+				</wait>
+				<goto>mainMenu</goto>
+			</if>
+			<play type="tts">We have found an office at the address, ${address}.</play>
+			<menu maxDigits="1" timeout="5000" name="optionMenu">
+				<play type="tts">Press 1, and we can connect you with the office, Press 2 if you would like us to read out the number, Press 3 if you are finished</play>
+				<keypress pressed="1">
+					<play type="tts">We are now connecting you with that office</play>
+					<transfer name="WIC_Office">${phone}</transfer>
+				</keypress>
+				<keypress pressed="2">
+					<play type="tts">The phone number is ${readable_phone}</play>
+					<wait >3																																																																																																																						
+					</wait>
+					<play type="tts">Again, the phone number is ${readable_phone}</play>
+					<wait >3																																																																																																																						
+					</wait>
+					<goto>optionMenu</goto>
+				</keypress>
+				<keypress pressed="3">
+					<play type="tts">Thank you for connecting with ${wic}. Have a good day.</play>
+					<wait >1																																														
+					</wait>
+					<hangup/>
+				</keypress>
+			</menu>
+		</keypress>
+	</menu>
+</dialplan>
+
+
+
+
+
+
+/////spanish
+
+
+
+
+<dialplan name="Root">
+	<stash varname="wic">Wick</stash>
+	<wait >1																								
+	</wait>
+
+	<play type="tts" voice="spanish1">Gracias por llamar a ${wic}.</play>
+	<menu maxDigits="1" timeout="5000" name="langMenu">
+		<play type="tts" voice="spanish1">Para espanol, marca 1. Para ingles, marca 2.</play>
+		<keypress pressed="1">
+			<wait >1   																																																			
+			</wait>
+			<menu maxDigits="5" timeout="5000" name="mainMenuSpan">
+				<play type="tts" voice="spanish1">Por favor, marca los cinco digitos de tu codigo postal.</play>
+				<keypress pressed="default">
+					<stash varname="zipcode">'${call.lastinput}'</stash>
+					<stash varname="ziplength">'${call.lastinput}'.length</stash>
+				</keypress>
+			</menu>
+			<if expr="${ziplength} &lt; 5">
+				<stash varname="stash1">'${call.lastinput}'</stash>
+				<play type="tts" voice="spanish1">No pudimos confirmar tu codigo postal. Por favor, vuelve a marcar tu codigo postal.</play>
+				<goto>mainMenuSpan</goto>
+			</if>
+			<get varname="zip_string" timeout="4000" name="get_from_db_span">http://wic-offices-frontend.us-west-2.elasticbeanstalk.com/phoneObj?zipcode=${zipcode}&amp;lang=spanish&amp;number=${call.dnis}</get>
+			<stash varname="address">'${zip_string}'.split(" | ")[0];</stash>
+			<stash varname="phone">'${zip_string}'.split(" | ")[1];</stash>
+			<stash varname="readable_phone">'${phone}'.split('').join(", ");</stash>
+			<wait >1    																																																			
+			</wait>
+			<if expr="'${address}' == 'Error'">
+				<wait >1				    																																																																											
+				</wait>
+				<play type="tts" voice="spanish1">No pudimos confirmar tu codigo postal. Por favor, vuelve a marcar tu codigo postal.</play>
+				<wait >1				    																																																																											
+				</wait>
+				<goto>mainMenuSpan</goto>
+			</if>
+			<play type="tts" voice="spanish1">Hemos encontrado una oficina en la siguiente direccion, ${address}.</play>
+			<menu maxDigits="1" timeout="5000" name="optionMenuSpan">
+				<play type="tts" voice="spanish1">Marca 1 para conectarte con la oficina, marca 2 si quieres que te demos el numero, marca 3 si has terminado.</play>
+				<keypress pressed="1">
+					<play type="tts" voice="spanish1">Te estamos conectando con esa oficina.</play>
+					<transfer name="WIC_Office_Span">${phone}</transfer>
+				</keypress>
+				<keypress pressed="2">
+					<play type="tts" voice="spanish1">El numero de telefono es${readable_phone}</play>
+					<wait >3   																																																																																					
+					</wait>
+					<play type="tts" voice="spanish1">Nuevamente, el numero de telefono es${readable_phone}</play>
+					<wait >3   																																																																																					
+					</wait>
+					<goto>optionMenuSpan</goto>
+				</keypress>
+				<keypress pressed="3">
+					<play type="tts" voice="spanish1">Gracias por llamar a ${wic}. Que tengas un buen dia.</play>
+					<wait >1    																																																																																					
+					</wait>
+					<hangup/>
+				</keypress>
+			</menu>
+		</keypress>
+		<keypress pressed="2">
+			<wait >1																																																												
+			</wait>
+			<menu maxDigits="5" timeout="5000" name="mainMenu">
+				<play type="tts">please enter your 5 digit zip code now</play>
+				<keypress pressed="default">
+					<stash varname="zipcode">'${call.lastinput}'</stash>
+					<stash varname="ziplength">'${call.lastinput}'.length</stash>
+				</keypress>
+			</menu>
+			<if expr="${ziplength} &lt; 5">
+				<stash varname="stash1">'${call.lastinput}'</stash>
+				<play type="tts">I'm sorry the zipcode you have entered is incorrect, please try again.</play>
+				<goto>mainMenu</goto>
+			</if>
+			<get varname="zip_string" timeout="4000" name="get_from_db">http://wic-offices-frontend.us-west-2.elasticbeanstalk.com/phoneObj?zipcode=${zipcode}&amp;lang=english&amp;number=${call.dnis}</get>
+			<stash varname="address">'${zip_string}'.split(" | ")[0];</stash>
+			<stash varname="phone">'${zip_string}'.split(" | ")[1];</stash>
+			<stash varname="readable_phone">'${phone}'.split('').join(", ");</stash>
+			<wait >1																																																																
+			</wait>
+			<if expr="'${address}' == 'Error'">
+				<wait >1				    																																																																																
+				</wait>
+				<play type="tts">I'm sorry the zipcode you have entered is incorrect, please try again.</play>
+				<wait >1				    																																																																																
+				</wait>
+				<goto>mainMenu</goto>
+			</if>
+			<play type="tts">We have found an office at the address, ${address}.</play>
+			<menu maxDigits="1" timeout="5000" name="optionMenu">
+				<play type="tts">Press 1, and we can connect you with the office, Press 2 if you would like us to read out the number, Press 3 if you are finished</play>
+				<keypress pressed="1">
+					<play type="tts">We are now connecting you with that office</play>
+					<transfer name="WIC_Office">${phone}</transfer>
+				</keypress>
+				<keypress pressed="2">
+					<play type="tts">The phone number is ${readable_phone}</play>
+					<wait >3																																																																																																																						
+					</wait>
+					<play type="tts">Again, the phone number is ${readable_phone}</play>
+					<wait >3																																																																																																																						
+					</wait>
+					<goto>optionMenu</goto>
+				</keypress>
+				<keypress pressed="3">
+					<play type="tts">Thank you for connecting with ${wic}. Have a good day.</play>
+					<wait >1																																														
+					</wait>
+					<hangup/>
+				</keypress>
+			</menu>
+		</keypress>
+	</menu>
+</dialplan>

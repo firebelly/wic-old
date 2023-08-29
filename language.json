@@ -1,0 +1,50 @@
+{
+
+    "english": {
+        "web": {
+            "error": {
+                "basic": "Whoops. Looks like we couldn’t find any results. Please try again."
+            }
+        },
+        "sms": {
+            "success": {
+                "basic": "WIC Location Near:"
+            },
+            "error": {
+                "basic": "We'll need some more information to finish the search. Please resend both your zip and keyword or visit signupwic.com for help.",
+                "underInput": "We'll need some more information to finish the search. Please resend both your zip and keyword or visit signupwic.com for help.",
+                "exceedsInput": "We'll need some more information to finish the search. Please resend both your zip and keyword or visit signupwic.com for help."
+            }
+        },
+        "voice": {
+            "error": {
+                "basic": "Error | Please check your zipcode and try again."
+            }
+        }
+    },
+
+    "spanish": {
+        "web": {
+            "error": {
+                "basic": "Parece que no encontramos nada. Por favor, vuelve a probar."
+            }
+        },
+        "sms": {
+            "success": {
+                "basic": "Oficina de WIC cerca de:"
+            },
+            "error": {
+                "basic": "Necesitamos mas informacion para la busqueda. Por favor, vuelve a enviar tu codigo postal y contrasena o visita signupwic.com para obtener ayuda.",
+                "underInput": "Necesitamos mas informacion para la busqueda. Por favor, vuelve a enviar tu codigo postal y contrasena o visita signupwic.com para obtener ayuda.",
+                "exceedsInput": "Necesitamos mas informacion para la busqueda. Por favor, vuelve a enviar tu codigo postal y contrasena o visita signupwic.com para obtener ayuda."
+            }
+        },
+        "voice": {
+            "error": {
+                "basic": "Error | No pudimos confirmar tu codigo postal. Por favor, vuelve a marcar tu codigo postal."
+            }
+        }
+        
+    }
+
+}

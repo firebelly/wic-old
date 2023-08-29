@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<% include ../templates/header-section.ejs %>
+	<% include ../templates/disclaimer-section.ejs %>
+	<% include ../templates/footer-section.ejs %>
+	<!--
+		<% include ../templates/map.ejs %>
+		<% include ../templates/list.ejs %>
+		<% include ../templates/error-toast.ejs %>
+		<% include ../templates/info-section.ejs %>
+		<% include ../templates/message-section.ejs %>
+		<% include ../templates/landing-section.ejs %>
+		<% include ../templates/support-section.ejs %>
+	-->
+</head>
+
+<body>
+
+	<div id="app">
+        <header-section v-bind:language="language"></header-section>
+		<disclaimer-section v-bind:language="language"></disclaimer-section>
+		<footer-section v-bind:language="language"></footer-section>
+	</div>
+	<script type="text/javascript" src="/static/js/bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+[
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "Parents: The First Year",
+    "unique_url": "parentsfirst",
+    "unique_shortcode": "parents1st",
+    "unique_phone": "8446020075",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "POC Digest",
+    "source": "Parents: The First Year",
+    "unique_url": "parents",
+    "unique_shortcode": "parents",
+    "unique_phone": "8446020073",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "Ser Padres Bebe",
+    "unique_url": "bebe",
+    "unique_shortcode": "bebe",
+    "unique_phone": "8446020069",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "POC Digest",
+    "source": "Countdown",
+    "unique_url": "wic",
+    "unique_shortcode": "wic",
+    "unique_phone": "8446016882",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "Countdown",
+    "unique_url": "countdown",
+    "unique_shortcode": "countdown",
+    "unique_phone": "8446016881",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "Pediatrician - Solo",
+    "unique_url": "yougotthis",
+    "unique_shortcode": "yougotthis",
+    "unique_phone": "8446016878",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "OB/GYN Non Countdown - Solo",
+    "unique_url": "nextstep",
+    "unique_shortcode": "nextstep",
+    "unique_phone": "8446020071",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "POC Digest",
+    "source": "Headstart",
+    "unique_url": "momsrule",
+    "unique_shortcode": "momsrule",
+    "unique_phone": "8446016883",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Parents",
+    "unique_url": "parents1",
+    "unique_shortcode": "parents1",
+    "unique_phone": "8446016879",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "Print",
+    "source": "Parents",
+    "unique_url": "parents2",
+    "unique_shortcode": "parents2",
+    "unique_phone": "8446013769",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Parents Latina",
+    "unique_url": "latina",
+    "unique_shortcode": "latina",
+    "unique_phone": "8446012773",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "Print",
+    "source": "Parents Latina",
+    "unique_url": "parentslatina",
+    "unique_shortcode": "parentslatina",
+    "unique_phone": "8446012770",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Ser Padres",
+    "unique_url": "serpadres1",
+    "unique_shortcode": "serpadres1",
+    "unique_phone": "8446012769",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "Print",
+    "source": "Ser Padres",
+    "unique_url": "serpadres",
+    "unique_shortcode": "serpadres",
+    "unique_phone": "8446011998",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Ser Padres Espera",
+    "unique_url": "espera",
+    "unique_shortcode": "espera",
+    "unique_phone": "8446011996",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Ser Padres Bebe",
+    "unique_url": "bebe1",
+    "unique_shortcode": "bebe1",
+    "unique_phone": "8446011989",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Fit Preg & Baby",
+    "unique_url": "baby",
+    "unique_shortcode": "baby",
+    "unique_phone": "8446010766",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC2",
+    "medium": "Print",
+    "source": "Fit Preg & Baby",
+    "unique_url": "baby2",
+    "unique_shortcode": "baby2",
+    "unique_phone": "8446010761",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Countdown",
+    "unique_url": "pregnancy",
+    "unique_shortcode": "expect",
+    "unique_phone": "8446010367",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Print",
+    "source": "Parents: The First Year",
+    "unique_url": "pfy",
+    "unique_shortcode": "pfy",
+    "unique_phone": "8446010365",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Email",
+    "source": "email",
+    "unique_url": "learnmore",
+    "unique_shortcode": "learnmore",
+    "unique_phone": "8446010364",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "MXM",
+    "source": "mxm",
+    "unique_url": "enroll",
+    "unique_shortcode": "enroll",
+    "unique_phone": "8446010363",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Trade Ads",
+    "source": "trade ads",
+    "unique_url": "Not Set",
+    "unique_shortcode": "wicnow",
+    "unique_phone": "8445999714",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Digital",
+    "source": "Google AdWords",
+    "unique_url": "letsgetstarted",
+    "unique_shortcode": "Not Set",
+    "unique_phone": "Not Set",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Digital",
+    "source": "Banner Ad",
+    "unique_url": "calltoday",
+    "unique_shortcode": "Not Set",
+    "unique_phone": "Not Set",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Digital",
+    "source": "Banner Ad",
+    "unique_url": "calltoday2",
+    "unique_shortcode": "Not Set",
+    "unique_phone": "Not Set",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC",
+    "medium": "Local Activation Toolkit",
+    "source": "local offices",
+    "unique_url": "local",
+    "unique_shortcode": "localwic",
+    "unique_phone": "8446010365",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC3",
+    "medium": "Print",
+    "source": "Parents Latina",
+    "unique_url": "latina1",
+    "unique_shortcode": "latina1",
+    "unique_phone": "8333876449",
+    "language": "spanish"
+  },
+  {
+    "campaign": "SignupWIC3",
+    "medium": "Print",
+    "source": "Fit Preg & Baby",
+    "unique_url": "baby3",
+    "unique_shortcode": "baby3",
+    "unique_phone": "8333876459",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC3",
+    "medium": "Print",
+    "source": "Healthy Mom & Baby",
+    "unique_url": "healthy",
+    "unique_shortcode": "healthymom",
+    "unique_phone": "8333876460",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC-Shutdown",
+    "medium": "Digital",
+    "source": "Shutdown Banner",
+    "unique_url": "open",
+    "unique_shortcode": "Not set",
+    "unique_phone": "Not set",
+    "language": "english"
+  },
+  {
+    "campaign": "SignupWIC-Shutdown",
+    "medium": "Digital",
+    "source": "Shutdown Banner",
+    "unique_url": "abierto",
+    "unique_shortcode": "Not set",
+    "unique_phone": "Not set",
+    "language": "spanish"
+  }
+]
