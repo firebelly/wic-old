@@ -2,11 +2,12 @@
 
 ## WIP Instructions
 
-Deploy via AWS Elastic Beanstalk (NOTE: US West 2 Region!)
+Deploy via AWS Elastic Beanstalk (NOTE: US West 2 Region!):
 
 [Elastic Beanstalk Console](https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard?environmentId=e-2tjgpj6wjg)
 
-
+Current site lives on this environment:
+["WIC Office Swap Wordpress"](https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/environment/dashboard?environmentId=e-bhfuirfcjm)
 
 
 The READ.me below was written by the 3rd party team that managed WIC's old site. 
