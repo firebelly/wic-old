@@ -1,0 +1,11 @@
+{
+    "officesAPIURL" : "http://wic-offices-backend.us-west-2.elasticbeanstalk.com/wp-json/wp/v2",
+    "gMapsAPIURL" : "https://maps.googleapis.com/maps/api/geocode",
+    "googleMapAPIKey" : "AIzaSyA3qWDKB-kROJ7wpUHOlxwEm-8xvEp4WV0",
+    "callfireAPIURL" : "https://www.callfire.com/v2/texts",
+    "callfireUserKey" : "8c61871db7d0",
+    "callFirePassKey" : "984e8f663b083877",
+    "heapAppID" : "906022816",
+    "mixpanelID": "e1b2694aaa8a7a27a4a82e63d07d3a1d",
+    "subdomainOffset": 2
+}
