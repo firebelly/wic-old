@@ -53,6 +53,7 @@ function activeTabs(){
 
 const onLoad = function() {
 	document.addEventListener( 'DOMContentLoaded', function( event ) {
+		console.log('test');
 		addDropdowns();
 		activeTabs();
 	} )

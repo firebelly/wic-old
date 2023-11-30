@@ -1,9 +1,9 @@
 {
-  "name": "node-js-getting-started",
+  "name": "wic",
   "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
+  "description": "WIC Archive Site, a Node.js app using Express 4",
   "engines": {
-    "node": "16.9.0"
+    "node": "20.3.0"
   },
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,12 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.19.1",
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^10.4.16",
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "callfire-api-client-js": "0.0.4",
     "cookie-parser": "^1.4.4",
-    "ejs": "2.4.1",
+    "ejs": "^3.1.9",
     "express": "^4.16.4",
     "express-session": "^1.14.2",
     "express-subdomain": "^1.0.5",
@@ -30,28 +30,29 @@
     "mixpanel": "^0.5.0",
     "request": "^2.88.0",
     "serve-favicon": "^2.5.0",
-    "universal-analytics": "^0.4.20",
+    "universal-analytics": "^0.5.3",
     "uuid": "^2.0.3",
     "vue": "^1.0.26",
     "vue-resource": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
+    "@types/vue": "^2.0.0",
     "babel-loader": "^8.2.5",
-    "css-loader": "^0.28.7",
+    "css-loader": "^6.8.1",
     "es6-promise": "^4.2.6",
     "mini-css-extract-plugin": "^2.6.1",
-    "node-sass": "^7.0.3",
-    "postcss-loader": "^2.1.6",
+    "node-sass": "^9.0.0",
+    "postcss-loader": "^7.3.3",
     "sass-loader": "^13.0.0",
-    "style-loader": "^0.19.0",
-    "stylelint": "^8.2.0",
+    "style-loader": "^3.3.3",
+    "stylelint": "^15.11.0",
     "webpack": "5.x.x",
     "webpack-cli": "^4.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/firebelly/wic-old"
   },
   "keywords": [
     "node",
