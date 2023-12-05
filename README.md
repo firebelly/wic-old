@@ -19,7 +19,7 @@ The archive site's frontend is a Node app using Express 4, and the server is con
 
 All code changes can happen here in this repo (it was originally stored in BitBucket), and the `main` branch can be deployed by Forge.
 
-# Inherited WIC
+# Inherited WIC (can mostly be ignored)
 
 ## Instructions
 
