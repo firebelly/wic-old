@@ -1,6 +1,27 @@
-# WIC Frontend
 
-## WIP Instructions
+# Guide
+
+## About
+
+This repo houses the inherited code for the site that will be sunset once our newly redesigned and redeveloped version lands. We inherited the old WIC site from another agency, with very little instruction on the deploy process, etc. 
+
+## DNS & Hosting
+
+Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/home?region=us-west-2#Dashboard); the domain name signupwic.com, along with its wildcard subdomains, are pointed to our [Firebelly Forge server, "signupwic--archive"](https://forge.laravel.com/servers/738991/sites). SSL certs are also handled in Forge.
+
+## Code Changes & Deploys
+
+The archive site's frontend is a Node app using Express 4, and the server is configured as such (which is, of course, different than our standard Craft setup):
+
+- An [active daemon](https://forge.laravel.com/servers/738991/daemons) that ensures the server keeps running & is automatically restarted in case of an error
+- [Custom Nginx config file](https://forge.laravel.com/servers/738991/sites/2178945/application) assigned to the application, which sets the necessary location proxies for Node
+- The deployment script restarts the Node daemon
+
+All code changes can happen here in this repo (it was originally stored in BitBucket), and the `main` branch can be deployed by Forge.
+
+# Inherited WIC
+
+## Instructions
 
 Deploy via AWS Elastic Beanstalk (NOTE: US West 2 Region!):
 
@@ -11,7 +32,6 @@ Current site lives on this environment:
 
 Delete deployed application versions:
 [Beanstalk cleanup](https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/application/versions?applicationName=Wic%20Offices%20Wordpress)
-
 
 The READ.me below was written by the 3rd party team that managed WIC's old site. 
 
