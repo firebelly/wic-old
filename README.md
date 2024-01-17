@@ -29,7 +29,7 @@ Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.c
 
 [Database Instance Actions](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false)
 
-^^ This is how you create the EC2 connection
+^^ This is how you create the EC2 connection, click "Set Up EC2 Connection"
 
 <img width="748" alt="wp_offices" src="https://github.com/firebelly/wic-old/assets/1038765/d07cb60b-015c-49f9-a2e7-2ce3c0ff119e">
 
