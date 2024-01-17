@@ -31,6 +31,10 @@ Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.c
 
 ^^ This is how you create the EC2 connection
 
+<img width="748" alt="wp_offices" src="https://github.com/firebelly/wic-old/assets/1038765/d07cb60b-015c-49f9-a2e7-2ce3c0ff119e">
+
+[Wordpress Admin Site (Backend Offices](http://wic-offices-backend.us-west-2.elasticbeanstalk.com/wp-admin/)
+
 ## Office Mapping
 
 Office mapping is written by the backend application -- referenced [here](https://github.com/firebelly/wic-old/blob/main/config.json) in the config file for the front-end application.
