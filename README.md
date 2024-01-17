@@ -10,19 +10,25 @@ This repo houses the inherited code for the site that will be sunset once our ne
 Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/home?region=us-west-2#Dashboard); the domain name signupwic.com, along with its wildcard subdomains, are pointed to our [Firebelly Forge server, "signupwic--archive"](https://forge.laravel.com/servers/738991/sites). SSL certs are also handled in Forge.
 
 <img width="1446" alt="aws_dns" src="https://github.com/firebelly/wic-old/assets/1038765/a63d6025-29e2-455f-905d-7049f686a3e6">
+
 [DNS Records](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1#ListRecordSets/Z217C3DOANTT8S)
 
 <img width="1677" alt="aws_ec2_instances" src="https://github.com/firebelly/wic-old/assets/1038765/db355958-7c03-483e-a355-b6b97ba7ff5b">
+
 [EC2 Instances](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#Instances:instanceState=running)
 
 <img width="1450" alt="aws_backend_instance" src="https://github.com/firebelly/wic-old/assets/1038765/8d8b0c35-35ae-4caa-8bc0-0cd23f659339">
+
 [Backend Instance(Offices)](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#InstanceDetails:instanceId=i-0c1398cfb9127985a)
 
 <img width="1467" alt="aws_rds_backend" src="https://github.com/firebelly/wic-old/assets/1038765/8d24ef0b-e0b5-41a5-8ba6-ea837dc51503">
+
 [RDS Database Instance](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false)
 
 <img width="1149" alt="aws_rds_instance" src="https://github.com/firebelly/wic-old/assets/1038765/584dd8eb-3fd1-4bcc-8ade-2f3eeedcc213">
+
 [Database Instance Actions](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false)
+
 ^^ This is how you create the EC2 connection
 
 ## Office Mapping
