@@ -5,13 +5,20 @@
 
 This repo houses the inherited code for the site that will be sunset once our newly redesigned and redeveloped version lands. We inherited the old WIC site from another agency, with very little instruction on the deploy process, etc. 
 
-## DNS & Hosting & DB
+## DNS & Hosting
 
-Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/home?region=us-west-2#Dashboard); the domain name signupwic.com, along with its wildcard subdomains, are pointed to our [Firebelly Forge server, "signupwic--archive"](https://forge.laravel.com/servers/738991/sites). SSL certs are also handled in Forge.
+Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.console.aws.amazon.com/route53/v2/home?region=us-west-2#Dashboard); the domain name signupwic.com, along with its wildcard subdomains, are pointed to 159.65.220.15, our [Firebelly Forge server IP, "signupwic--archive"](https://forge.laravel.com/servers/738991/sites). SSL certs are also handled in Forge. 
+
+- WIC's frontend production code lives on Forge
+- WIC's backend production code lives on AWS; this is the Wordpress layer that houses WIC office content.
 
 <img width="1446" alt="aws_dns" src="https://github.com/firebelly/wic-old/assets/1038765/a63d6025-29e2-455f-905d-7049f686a3e6">
 
 [DNS Records](https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1#ListRecordSets/Z217C3DOANTT8S)
+
+## EC2 
+
+The only server (or, _instance_) we care about here is the "wic-offices-backend" instance. 
 
 <img width="1677" alt="aws_ec2_instances" src="https://github.com/firebelly/wic-old/assets/1038765/db355958-7c03-483e-a355-b6b97ba7ff5b">
 
@@ -21,23 +28,23 @@ Currently, DNS management is handled within [AWS's Route 53](https://us-east-1.c
 
 [Backend Instance(Offices)](https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#InstanceDetails:instanceId=i-0c1398cfb9127985a)
 
+## RDS (Database)
+
+WIC's database is an [RDS Database Instance](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false). 
+
 <img width="1467" alt="aws_rds_backend" src="https://github.com/firebelly/wic-old/assets/1038765/8d24ef0b-e0b5-41a5-8ba6-ea837dc51503">
 
-[RDS Database Instance](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false)
+It's connected to the EC2 "wic-offices-backend" instance. To connect a database to an EC2 instance, click "Actions" > "Set up EC2 Connection." The current db was created from a [snapshot](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#snapshots-list:).
 
 <img width="1149" alt="aws_rds_instance" src="https://github.com/firebelly/wic-old/assets/1038765/584dd8eb-3fd1-4bcc-8ade-2f3eeedcc213">
 
 [Database Instance Actions](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#database:id=wic-database-instance;is-cluster=false)
 
-^^ This is how you create the EC2 connection, click "Set Up EC2 Connection"
+## Wordpress
+
+As mentioned before, WIC's backend is built on Wordpress; office locations are managed by the client from the [Wordpress Admin Site](http://wic-offices-backend.us-west-2.elasticbeanstalk.com). Mapping is written by the backend application -- referenced [here](https://github.com/firebelly/wic-old/blob/main/config.json) in the config file for the front-end application.
 
 <img width="748" alt="wp_offices" src="https://github.com/firebelly/wic-old/assets/1038765/d07cb60b-015c-49f9-a2e7-2ce3c0ff119e">
-
-[Wordpress Admin Site (Backend Offices](http://wic-offices-backend.us-west-2.elasticbeanstalk.com/wp-admin/)
-
-## Office Mapping
-
-Office mapping is written by the backend application -- referenced [here](https://github.com/firebelly/wic-old/blob/main/config.json) in the config file for the front-end application.
 
 ## Code Changes & Deploys
 
